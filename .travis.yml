@@ -9,7 +9,7 @@ script:
   - docker run -e CI=true alessandro86495/react-test npm test
 
 after_success:
-  - docker build -t alessandro86495/multi-client .client
+  - docker build -t alessandro86495/multi-client ./client
   - docker build -t alessandro86495/multi-nginx ./nginx
   - docker build -t alessandro86495/multi-server ./server
   - docker build -t alessandro86495/multi-worker ./worker

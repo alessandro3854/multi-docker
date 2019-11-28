@@ -20,3 +20,17 @@ after_success:
   - docker push alessandro86495/multi-nginx
   - docker push alessandro86495/multi-server
   - docker push alessandro86495/multi-worker
+#deploy:
+# Iam .> create a new user su aws
+#insert variable env in travis
+#deploy: 
+#  provider: elasticbeanstalk
+#  region: us-west-1 #nell'http della pagina
+#  app: multi-docker #first part dell'header 
+#  env: MultiDocker-env #second part dell'header
+#  bucket_name: elasticbeanstalk-us-west-1-30324334 #ews->s3-> region->il bucket name
+#  bucket_path: docker-multi #cartella che ci interessa 
+#  on:
+#  branch: master
+#access_key_id: $AWS_ACCESS_KEY
+#secret_access_key: $AWS_SECRET_KEY
